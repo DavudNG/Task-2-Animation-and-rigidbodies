@@ -28,8 +28,9 @@ public class MeteorLogic : MonoBehaviour
     {
         Debug.Log("a collision occurred");
         bIsLive = false;
-        this.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        this.transform.DetachChildren();
+        //this.GetComponent<Rigidbody>().velocity = Vector3.zero;
         myExplosion.SetActive(true);
-        this.GetComponent<MeshRenderer>().enabled = false;
+        //this.GetComponent<MeshRenderer>().enabled = false;
     }
 }
